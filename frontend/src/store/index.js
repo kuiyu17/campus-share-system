@@ -1,9 +1,11 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
 
+
 // 设置axios默认配置
-axios.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8'
-axios.defaults.headers.common['Accept'] = 'application/json; charset=utf-8'
+axios.defaults.baseURL = 'https://campus-share-system.vercel.app';
+axios.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8';
+axios.defaults.headers.common['Accept'] = 'application/json; charset=utf-8';
 
 export const useUserStore = defineStore('user', {
   state: () => ({
